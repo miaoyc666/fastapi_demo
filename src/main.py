@@ -1,9 +1,12 @@
 from fastapi import FastAPI
-from fastapi.responses import PlainTextResponse
 
 app = FastAPI()
 
-@app.get("/ping", response_class=PlainTextResponse)
+@app.get("/ping")
 async def ping():
-    return "pong"
+    return {
+        "status": 10000,
+        "msg": "success",
+        "data": "pong"
+    }
 
