@@ -3,7 +3,7 @@ from fastapi.responses import PlainTextResponse
 
 app = FastAPI()
 
-@app.get("/pingpong", response_class=PlainTextResponse)
-async def pingpong():
+@app.get("/ping", response_class=PlainTextResponse)
+async def ping():
     return "pong"
 
